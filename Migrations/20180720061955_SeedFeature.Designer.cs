@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using carsdealer.Persistence;
 
 namespace carsdealer.Migrations
 {
     [DbContext(typeof(CarsDealerDbContext))]
-    partial class CarsDealerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180720061955_SeedFeature")]
+    partial class SeedFeature
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
