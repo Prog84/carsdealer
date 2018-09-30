@@ -1,6 +1,7 @@
+import { AppErrorHandler } from './app.error-handler';
 import { VehicleService } from './services/vehicle.service';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpModule } from '@angular/http';
@@ -36,6 +37,7 @@ import { VehicleFormComponent } from './components/vehicle-form/vehicle-form.com
     ])
   ],
   providers: [
+    { provide: ErrorHandler, useClass: AppErrorHandler },
     VehicleService
   ],
   bootstrap: [AppComponent]
